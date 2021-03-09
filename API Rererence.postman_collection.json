@@ -1,0 +1,3492 @@
+{
+	"info": {
+		"_postman_id": "7dca192d-d57e-4c1b-99b6-6f7c678143c2",
+		"name": "API Rererence",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Attachments",
+			"item": [
+				{
+					"name": "add_attachment_to_case",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "attachment",
+									"description": "Dateiname",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/add_attachment_to_case/{{case_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/add_attachment_to_case/{{case_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Adds an attachment to a test case. The maximum allowable upload size is set to 256mb."
+					},
+					"response": []
+				},
+				{
+					"name": "add_attachment_to_plan",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "attachment",
+									"description": "Dateiname",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/add_attachment_to_plan/{{plan_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/add_attachment_to_plan/{{plan_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Adds an attachment to a test plan. The maximum allowable upload size is set to 256mb."
+					},
+					"response": []
+				},
+				{
+					"name": "add_attachment_to_plan_entry",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "attachment",
+									"description": "Dateiname",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/add_attachment_to_plan_entry/{{plan_id}}/{{entry_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/add_attachment_to_plan_entry/{{plan_id}}/{{entry_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Adds an attachment to a test plan entry. The maximum allowable upload size is set to 256mb."
+					},
+					"response": []
+				},
+				{
+					"name": "add_attachment_to_result",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "attachment",
+									"description": "Dateiname",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/add_attachment_to_result/{{result_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/add_attachment_to_result/{{result_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Please Note: The ability to edit test results must be enabled under ‘Site Settings’ in order for add_attachment_to_result endpoints to work.\nAdds attachment to a result based on the result ID. The maximum allowable upload size is set to 256mb."
+					},
+					"response": []
+				},
+				{
+					"name": "add_attachment_to_run",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "attachment",
+									"description": "Dateiname",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/add_attachment_to_run/{{run_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/add_attachment_to_run/{{run_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Adds attachment to test run. The maximum allowable upload size is set to 256mb."
+					},
+					"response": []
+				},
+				{
+					"name": "get_attachments_for_case",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "attachment",
+									"description": "Dateiname",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/get_attachments_for_case/{{case_id}}&limit={{limit}}&offset={{offset}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_attachments_for_case/{{case_id}}",
+									"value": null
+								},
+								{
+									"key": "limit",
+									"value": "{{limit}}"
+								},
+								{
+									"key": "offset",
+									"value": "{{offset}}"
+								}
+							]
+						},
+						"description": "Adds attachment to test run. The maximum allowable upload size is set to 256mb."
+					},
+					"response": []
+				},
+				{
+					"name": "get_attachments_for_plan",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "attachment",
+									"description": "Dateiname",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/get_attachments_for_plan/{{plan_id}}&limit={{limit}}&offset={{offset}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_attachments_for_plan/{{plan_id}}",
+									"value": null
+								},
+								{
+									"key": "limit",
+									"value": "{{limit}}"
+								},
+								{
+									"key": "offset",
+									"value": "{{offset}}"
+								}
+							]
+						},
+						"description": "Returns a list of attachments for a test plan."
+					},
+					"response": []
+				},
+				{
+					"name": "get_attachments_for_plan_entry",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "attachment",
+									"description": "Dateiname",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/get_attachments_for_plan_entry/{{plan_id}}/{{entry_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_attachments_for_plan_entry/{{plan_id}}/{{entry_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Returns a list of attachments for a test plan entry."
+					},
+					"response": []
+				},
+				{
+					"name": "get_attachments_for_run",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "attachment",
+									"description": "Dateiname",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/get_attachments_for_run/{{run_id}}&limit={{limit}}&offset={{offset}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_attachments_for_run/{{run_id}}",
+									"value": null
+								},
+								{
+									"key": "limit",
+									"value": "{{limit}}"
+								},
+								{
+									"key": "offset",
+									"value": "{{offset}}"
+								}
+							]
+						},
+						"description": "Returns a list of attachments for a test run."
+					},
+					"response": []
+				},
+				{
+					"name": "get_attachments_for_test",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "attachment",
+									"description": "Dateiname",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/get_attachments_for_test/{{test_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_attachments_for_test/{{test_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Returns a list of attachments for a test’s results."
+					},
+					"response": []
+				},
+				{
+					"name": "get_attachment",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "attachment",
+									"description": "Dateiname",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/get_attachment/{{attachment_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_attachment/{{attachment_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Retrieves the requested file identified by :attachment_id."
+					},
+					"response": []
+				},
+				{
+					"name": "delete_attachment",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/delete_attachment/{{attachment_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/delete_attachment/{{attachment_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Deletes the specified attachment identified by :attachment_id."
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Cases",
+			"item": [
+				{
+					"name": "get_case",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/get_case/{{case_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_case/{{case_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Returns an existing test case."
+					},
+					"response": []
+				},
+				{
+					"name": "get_cases",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/get_cases/{{project_id}}&suite_id={{suite_id}}&limit={{limit}}&offset={{offset}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_cases/{{project_id}}",
+									"value": null
+								},
+								{
+									"key": "suite_id",
+									"value": "{{suite_id}}"
+								},
+								{
+									"key": "limit",
+									"value": "{{limit}}"
+								},
+								{
+									"key": "offset",
+									"value": "{{offset}}"
+								}
+							]
+						},
+						"description": "Returns a list of test cases for a project or specific test suite (if the project has multiple suites enabled)."
+					},
+					"response": []
+				},
+				{
+					"name": "get_history_for_case",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/get_history_for_case/{{case_id}}&limit={{limit}}&offset={{offset}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_history_for_case/{{case_id}}",
+									"value": null
+								},
+								{
+									"key": "limit",
+									"value": "{{limit}}"
+								},
+								{
+									"key": "offset",
+									"value": "{{offset}}"
+								}
+							]
+						},
+						"description": "Returns the edit history for a test case_id."
+					},
+					"response": []
+				},
+				{
+					"name": "add_case",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"This is a test case\",\n    \"type_id\": 1,\n    \"priority_id\": 3,\n    \"estimate\": \"3m\",\n    \"refs\": \"RF-1, RF-2\",\n    \"custom_steps_separated\": [\n        {\n            \"content\": \"Step 1\",\n            \"expected\": \"Expected Result 1\"\n        },\n        {\n            \"content\": \"Step 2\",\n            \"expected\": \"Expected Result 2\"\n        },\n        {\n            \"shared_step_id\": 3\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/add_case/{{section_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/add_case/{{section_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Creates a new test case."
+					},
+					"response": []
+				},
+				{
+					"name": "copy_cases_to_section",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"case_ids\": [{{case_id}}]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/copy_cases_to_section/{{section_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/copy_cases_to_section/{{section_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Copies the list of cases to another suite/section."
+					},
+					"response": []
+				},
+				{
+					"name": "update_case",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"priority_id\": 1,\n\t\"estimate\": \"5m\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/update_case/{{case_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/update_case/{{case_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Updates an existing test case (partial updates are supported, i.e. you can submit and update specific fields only)."
+					},
+					"response": []
+				},
+				{
+					"name": "update_cases",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"priority_id\": 1,\n\t\"estimate\": \"5m\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/update_cases/{{project_id}}&suite_id={{suite_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/update_cases/{{project_id}}",
+									"value": null
+								},
+								{
+									"key": "suite_id",
+									"value": "{{suite_id}}"
+								}
+							]
+						},
+						"description": "Updates multiple test cases with the same values, such as setting a set of test cases to High priority. This does not support updating multiple test cases with different values per test case."
+					},
+					"response": []
+				},
+				{
+					"name": "move_cases_to_section",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"case_ids\": [{{case_ids}}]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/move_cases_to_section/{{section_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/move_cases_to_section/{{section_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Moves cases to another suite or section."
+					},
+					"response": []
+				},
+				{
+					"name": "delete_case",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/delete_case/{{case_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/delete_case/{{case_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Deletes an existing test case."
+					},
+					"response": []
+				},
+				{
+					"name": "delete_cases",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"case_ids\": [{{case_id}}]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/delete_cases/{{project_id}}&{{suite_id}}&soft=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/delete_cases/{{project_id}}",
+									"value": null
+								},
+								{
+									"key": "{{suite_id}}",
+									"value": null
+								},
+								{
+									"key": "soft",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Deletes multiple test cases from a project or test suite."
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Case Fields",
+			"item": [
+				{
+					"name": "get_case_fields",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/get_case_fields",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_case_fields",
+									"value": null
+								}
+							]
+						},
+						"description": "Returns a list of available test case custom fields."
+					},
+					"response": []
+				},
+				{
+					"name": "add_case_field",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"Multiselect\",\n    \"name\": \"my_multiselect\",\n    \"label\": \"My Multiselect\",\n    \"description\": \"my custom Multiselect description\",\n    \"configs\": [\n        {\n            \"context\": {\n                \"is_global\": true,\n                \"project_ids\": \"\"\n            },\n            \"options\": {\n                \"is_required\": false,\n                \"items\": \"1, One\\n2, Two\"\n            }\n        }\n    ],\n    \"include_all\": true\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/add_case_field",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/add_case_field",
+									"value": null
+								}
+							]
+						},
+						"description": "Creates a new test case custom field."
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Case Types",
+			"item": [
+				{
+					"name": "get_case_types",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/get_case_types",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_case_types",
+									"value": null
+								}
+							]
+						},
+						"description": "Returns a list of available case types."
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Configurations",
+			"item": [
+				{
+					"name": "get_configs",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/get_configs/{{project_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_configs/{{project_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Returns a list of available configurations, grouped by configuration groups."
+					},
+					"response": []
+				},
+				{
+					"name": "add_config_group",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Browsers\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/add_config_group/{{project_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/add_config_group/{{project_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Creates a new configuration group (requires TestRail 5.2 or later)."
+					},
+					"response": []
+				},
+				{
+					"name": "add_config",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Chrome\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/add_config/{{config_group_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/add_config/{{config_group_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Creates a new configuration (requires TestRail 5.2 or later)."
+					},
+					"response": []
+				},
+				{
+					"name": "update_config_group",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Operating Systems\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/update_config_group/{{config_group_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/update_config_group/{{config_group_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Updates an existing configuration group (requires TestRail 5.2 or later)."
+					},
+					"response": []
+				},
+				{
+					"name": "update_config",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Firefox\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/update_config/{{config_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/update_config/{{config_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Updates an existing configuration (requires TestRail 5.2 or later)."
+					},
+					"response": []
+				},
+				{
+					"name": "delete_config_group",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/delete_config_group/{{config_group_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/delete_config_group/{{config_group_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Deletes an existing configuration group and its configurations (requires TestRail 5.2 or later)."
+					},
+					"response": []
+				},
+				{
+					"name": "delete_config",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/delete_config/{{config_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/delete_config/{{config_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Deletes an existing configuration (requires TestRail 5.2 or later)."
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Milestones",
+			"item": [
+				{
+					"name": "get_milestone",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/get_milestone/{{milestone_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_milestone/{{milestone_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Returns an existing milestone."
+					},
+					"response": []
+				},
+				{
+					"name": "get_milestones",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/get_milestones/{{project_id}}&limit={{limit}}&offset={{offset}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_milestones/{{project_id}}",
+									"value": null
+								},
+								{
+									"key": "limit",
+									"value": "{{limit}}"
+								},
+								{
+									"key": "offset",
+									"value": "{{offset}}"
+								}
+							]
+						},
+						"description": "Returns the list of milestones for a project."
+					},
+					"response": []
+				},
+				{
+					"name": "add_milestone",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Release 2.0\",\n    \"due_on\": 1394596385\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/add_milestone/{{project_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/add_milestone/{{project_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Creates a new milestone."
+					},
+					"response": []
+				},
+				{
+					"name": "update_milestone",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"is_completed\": true\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/update_milestone/{{milestone_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/update_milestone/{{milestone_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Updates an existing milestone (partial updates are supported, i.e. you can submit and update specific fields only)."
+					},
+					"response": []
+				},
+				{
+					"name": "delete_milestone",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/delete_milestone/{{milestone_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/delete_milestone/{{milestone_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Deletes an existing milestone."
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Plans",
+			"item": [
+				{
+					"name": "get_plan",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/get_plan/{{plan_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_plan/{{plan_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Returns an existing test plan."
+					},
+					"response": []
+				},
+				{
+					"name": "get_plans",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/get_plans/{{project_id}}&limit={{limit}}&offset={{offset}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_plans/{{project_id}}",
+									"value": null,
+									"description": "The ID of the project"
+								},
+								{
+									"key": "limit",
+									"value": "{{limit}}"
+								},
+								{
+									"key": "offset",
+									"value": "{{offset}}"
+								}
+							]
+						},
+						"description": "Returns a list of test plans for a project."
+					},
+					"response": []
+				},
+				{
+					"name": "add_plan",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"System test\",\n    \"entries\": [\n        {\n            \"suite_id\": 1,\n            \"name\": \"Custom run name\",\n            \"assignedto_id\": 1 // ID of the assignee\n        },\n        {\n            \"suite_id\": 1,\n            \"include_all\": false, // Custom selection\n            \"case_ids\": [\n                1,\n                2,\n                3,\n                5\n            ]\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/add_plan/{{project_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/add_plan/{{project_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Creates a new test plan."
+					},
+					"response": []
+				},
+				{
+					"name": "add_plan_entry",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"suite_id\": 1,\n    \"assignedto_id\": 1, // Default assignee\n    \"include_all\": true, // Default selection\n    \"config_ids\": [\n        1,\n        2,\n        4,\n        5,\n        6\n    ],\n    \"runs\": [\n        {\n            \"include_all\": false, // Override selection\n            \"case_ids\": [\n                1,\n                2,\n                3\n            ],\n            \"config_ids\": [\n                2,\n                5\n            ]\n        },\n        {\n            \"include_all\": false, // Override selection\n            \"case_ids\": [\n                1,\n                2,\n                3,\n                5,\n                8\n            ],\n            \"assignedto_id\": 2, // Override assignee\n            \"config_ids\": [\n                2,\n                6\n            ]\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/add_plan_entry/{{plan_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/add_plan_entry/{{plan_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Adds one or more new test runs to a test plan."
+					},
+					"response": []
+				},
+				{
+					"name": "add_run_to_plan_entry",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"config_ids\": [\n        1,\n        5\n    ],\n    \"include_all\": false,\n    \"case_ids\": [\n        1,\n        2,\n        4\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/add_run_to_plan_entry/{{plan_id}}/{{entry_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/add_run_to_plan_entry/{{plan_id}}/{{entry_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Adds a new test run to a test plan entry (using configurations)."
+					},
+					"response": []
+				},
+				{
+					"name": "update_plan",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"System test\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/update_plan/{{plan_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/update_plan/{{plan_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Updates an existing test plan (partial updates are supported, i.e. you can submit and update specific fields only)."
+					},
+					"response": []
+				},
+				{
+					"name": "update_plan_entry",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"System test\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/update_plan_entry/{{plan_id}}/{{entry_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/update_plan_entry/{{plan_id}}/{{entry_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Updates one or more groups of test runs in a plan (partial updates are supported, i.e. you can submit and update specific fields only)."
+					},
+					"response": []
+				},
+				{
+					"name": "update_run_in_plan_entry",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"include_all\": false,\n    \"case_ids\": [\n        1,\n        2,\n        4\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/update_run_in_plan_entry/{{run_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/update_run_in_plan_entry/{{run_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Updates a run inside a plan entry which uses configurations."
+					},
+					"response": []
+				},
+				{
+					"name": "close_plan",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/close_plan/{{plan_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/close_plan/{{plan_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Closes an existing test plan and archives its test runs & results."
+					},
+					"response": []
+				},
+				{
+					"name": "delete_plan",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/delete_plan/{{plan_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/delete_plan/{{plan_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Deletes an existing test plan."
+					},
+					"response": []
+				},
+				{
+					"name": "delete_plan_entry",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/delete_plan_entry/{{plan_id}}/{{entry_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/delete_plan_entry/{{plan_id}}/{{entry_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Deletes an existing test plan."
+					},
+					"response": []
+				},
+				{
+					"name": "delete_run_from_plan_entry",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/delete_run_from_plan_entry/{{run_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/delete_run_from_plan_entry/{{run_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Deletes a test run from a test plan entry."
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Priorities",
+			"item": [
+				{
+					"name": "get_priorities",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/get_priorities",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_priorities",
+									"value": null
+								}
+							]
+						},
+						"description": "Returns an existing test plan."
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Projects",
+			"item": [
+				{
+					"name": "get_project",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/get_project/{{project_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_project/{{project_id}}",
+									"value": null,
+									"description": "The ID of the project"
+								}
+							]
+						},
+						"description": "Returns an existing project."
+					},
+					"response": []
+				},
+				{
+					"name": "get_projects",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/get_projects&limit={{limit}}&offset={{offset}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_projects",
+									"value": null
+								},
+								{
+									"key": "limit",
+									"value": "{{limit}}"
+								},
+								{
+									"key": "offset",
+									"value": "{{offset}}"
+								}
+							]
+						},
+						"description": "Returns the list of available projects."
+					},
+					"response": []
+				},
+				{
+					"name": "add_project",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"This is a new project\",\n    \"announcement\": \"This is the description for the project\",\n    \"show_announcement\": true\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/add_project",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/add_project",
+									"value": null
+								}
+							]
+						},
+						"description": "Creates a new project (admin status required)."
+					},
+					"response": []
+				},
+				{
+					"name": "update_project",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"This is a new project\",\n    \"announcement\": \"This is the description for the project\",\n    \"show_announcement\": true\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/update_project/{{project_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/update_project/{{project_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Updates an existing project (admin status required; partial updates are supported, i.e. you can submit and update specific fields only)."
+					},
+					"response": []
+				},
+				{
+					"name": "delete_project",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/delete_project/{{project_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/delete_project/{{project_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Updates an existing project (admin status required; partial updates are supported, i.e. you can submit and update specific fields only)."
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Reports",
+			"item": [
+				{
+					"name": "get_reports",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/run_report/{{report_template_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/run_report/{{report_template_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Returns a list of API available reports by project."
+					},
+					"response": []
+				},
+				{
+					"name": "run_report",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/get_reports/{{project_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_reports/{{project_id}}",
+									"value": null,
+									"description": "The ID of the project for which you want a list of API accessible reports"
+								}
+							]
+						},
+						"description": "Executes the report identified using the :report_id parameter and returns URL‘s for accessing the report in HTML and PDF format."
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Results",
+			"item": [
+				{
+					"name": "get_results",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/get_results/{{test_id}}&limit={{limit}}&offset={{offset}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_results/{{test_id}}",
+									"value": null
+								},
+								{
+									"key": "limit",
+									"value": "{{limit}}"
+								},
+								{
+									"key": "offset",
+									"value": "{{offset}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_results_for_case",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/get_results_for_case/{{run_id}}/{{case_id}}&limit={{limit}}&offset={{offset}}&status_id=1,2,5",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_results_for_case/{{run_id}}/{{case_id}}",
+									"value": null
+								},
+								{
+									"key": "limit",
+									"value": "{{limit}}"
+								},
+								{
+									"key": "offset",
+									"value": "{{offset}}"
+								},
+								{
+									"key": "status_id",
+									"value": "1,2,5",
+									"description": "A comma-separated list of status IDs to filter by."
+								}
+							]
+						},
+						"description": "Returns a list of test results for a test run and case combination.\nThe difference to get_results is that this method expects a test run + test case instead of a test. In TestRail, tests are part of a test run and the test cases are part of the related test suite. So, when you create a new test run, TestRail creates a test for each test case found in the test suite of the run. You can therefore think of a test as an “instance” of a test case which can have test results, comments and a test status. Please also see TestRail’s getting started guide for more details about the differences between test cases and tests."
+					},
+					"response": []
+				},
+				{
+					"name": "get_results_for_run",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/get_results_for_run/{{run_id}}&limit={{limit}}&offset={{offset}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_results_for_run/{{run_id}}",
+									"value": null,
+									"description": "The ID of the test run"
+								},
+								{
+									"key": "created_after",
+									"value": null,
+									"description": "Only return test results created after this date (as UNIX timestamp).",
+									"disabled": true
+								},
+								{
+									"key": "created_before",
+									"value": null,
+									"description": "Only return test results created before this date (as UNIX timestamp).",
+									"disabled": true
+								},
+								{
+									"key": "created_by",
+									"value": null,
+									"description": "A comma-separated list of creators (user IDs) to filter by.",
+									"disabled": true
+								},
+								{
+									"key": "defects_filter",
+									"value": "",
+									"description": "A single Defect ID (e.g. TR-1, 4291, etc.)",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "{{limit}}",
+									"description": "Number that sets the limit of results to be shown on the response (Optional parameter. The response size limit is 250 by default) (requires TestRail 6.7 or later)"
+								},
+								{
+									"key": "offset",
+									"value": "{{offset}}",
+									"description": "Number that sets the position where the response should start from (Optional parameter) (requires TestRail 6.7 or later)"
+								},
+								{
+									"key": "status_id",
+									"value": "",
+									"description": "A comma-separated list of status IDs to filter by.",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Returns a list of test results for a test run."
+					},
+					"response": []
+				},
+				{
+					"name": "add_result",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status_id\": 5,\n    \"comment\": \"This test failed\",\n    \"elapsed\": \"15s\",\n    \"defects\": \"TR-7\",\n    \"version\": \"1.0 RC1 build 3724\",\n    \"custom_step_results\": [\n        {\n            \"content\": \"Step 1\",\n            \"expected\": \"Expected Result 1\",\n            \"actual\": \"Actual Result 1\",\n            \"status_id\": 1\n        },\n        {\n            \"content\": \"Step 2\",\n            \"expected\": \"Expected Result 2\",\n            \"actual\": \"Actual Result 2\",\n            \"status_id\": 2\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/add_result/{{test_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/add_result/{{test_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Adds a new test result, comment or assigns a test. It’s recommended to use add_results instead if you plan to add results for multiple tests."
+					},
+					"response": []
+				},
+				{
+					"name": "add_result_for_case",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status_id\": 5,\n    \"comment\": \"This test failed\",\n    \"elapsed\": \"15s\",\n    \"defects\": \"TR-7\",\n    \"version\": \"1.0 RC1 build 3724\",\n    \"custom_step_results\": [\n        {\n            \"content\": \"Step 1\",\n            \"expected\": \"Expected Result 1\",\n            \"actual\": \"Actual Result 1\",\n            \"status_id\": 1\n        },\n        {\n            \"content\": \"Step 2\",\n            \"expected\": \"Expected Result 2\",\n            \"actual\": \"Actual Result 2\",\n            \"status_id\": 2\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/add_result_for_case/{{run_id}}/{{case_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/add_result_for_case/{{run_id}}/{{case_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Adds a new test result, comment or assigns a test (for a test run and case combination). It’s recommended to use add_results_for_cases instead if you plan to add results for multiple test cases.\nThe difference to add_result is that this method expects a test run + test case instead of a test. In TestRail, tests are part of a test run and the test cases are part of the related test suite. So, when you create a new test run, TestRail creates a test for each test case found in the test suite of the run. You can therefore think of a test as an “instance” of a test case which can have test results, comments and a test status. Please also see TestRail’s getting started guide for more details about the differences between test cases and tests."
+					},
+					"response": []
+				},
+				{
+					"name": "add_results",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"results\": [\n        {\n            \"test_id\": 101,\n            \"status_id\": 5,\n            \"comment\": \"This test failed\",\n            \"defects\": \"TR-7\"\n        },\n        {\n            \"test_id\": 102,\n            \"status_id\": 1,\n            \"comment\": \"This test passed\",\n            \"elapsed\": \"5m\",\n            \"version\": \"1.0 RC1\"\n        },\n        {\n            \"test_id\": 101,\n            \"assignedto_id\": 5,\n            \"comment\": \"Assigned this test to Joe\"\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/add_results/{{run_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/add_results/{{run_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Adds one or more new test results, comments or assigns one or more tests. Ideal for test automation to bulk-add multiple test results in one step.\n\nThis method expects an array of test results (via the ‘results’ field, please see below). Each test result must specify the test ID and can pass in the same fields as add_result, namely all test related system and custom fields.\nPlease note that all referenced tests must belong to the same test run."
+					},
+					"response": []
+				},
+				{
+					"name": "add_results_for_cases",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"results\": [\n        {\n            \"case_id\": 1,\n            \"status_id\": 5,\n            \"comment\": \"This test failed\",\n            \"defects\": \"TR-7\"\n        },\n        {\n            \"case_id\": 2,\n            \"status_id\": 1,\n            \"comment\": \"This test passed\",\n            \"elapsed\": \"5m\",\n            \"version\": \"1.0 RC1\"\n        },\n        {\n            \"case_id\": 1,\n            \"assignedto_id\": 5,\n            \"comment\": \"Assigned this test to Joe\"\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/add_results_for_cases/{{run_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/add_results_for_cases/{{run_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Adds one or more new test results, comments or assigns one or more tests (using the case IDs). Ideal for test automation to bulk-add multiple test results in one step.\n\nThis method expects an array of test results (via the ‘results’ field, please see below). Each test result must specify the test case ID and can pass in the same fields as add_result, namely all test related system and custom fields.\nThe difference to add_results is that this method expects test case IDs instead of test IDs. Please see add_result_for_case for details.\nPlease note that all referenced tests must belong to the same test run."
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Result Fields",
+			"item": [
+				{
+					"name": "get_result_fields",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/get_result_fields",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_result_fields",
+									"value": null
+								}
+							]
+						},
+						"description": "Returns an existing test run. Please see get_tests for the list of included tests in this run."
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Runs",
+			"item": [
+				{
+					"name": "get_run",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/get_run/{{run_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_run/{{run_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Returns an existing test run. Please see get_tests for the list of included tests in this run."
+					},
+					"response": []
+				},
+				{
+					"name": "get_runs",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/get_runs/{{project_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_runs/{{project_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Returns a list of test runs for a project. Only returns those test runs that are not part of a test plan (please see get_plans/get_plan for this)."
+					},
+					"response": []
+				},
+				{
+					"name": "add_run",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"suite_id\": {{suite_id}},\n\t\"name\": \"This is a new test run\",\n\t\"assignedto_id\": 5,\n        \"refs\": \"SAN-1, SAN-2\",\n\t\"include_all\": false,\n\t\"case_ids\": [{{case_id}}]\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/add_run/{{project_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/add_run/{{project_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Creates a new test run."
+					},
+					"response": []
+				},
+				{
+					"name": "update_run",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"description\": \"A description for the test run\",\n\t\"include_all\": true\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/update_run/{{run_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/update_run/{{run_id}}",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "close_run",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/close_run/{{run_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/close_run/{{run_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Closes an existing test run and archives its tests & results."
+					},
+					"response": []
+				},
+				{
+					"name": "delete_run",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/delete_run/{{run_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/delete_run/{{run_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Deletes an existing test run.\nTo delete a test run within a test plan, please see API:Plans."
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Sections",
+			"item": [
+				{
+					"name": "get_section",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/get_section/{{section_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_section/{{section_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Returns an existing section."
+					},
+					"response": []
+				},
+				{
+					"name": "get_sections",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/get_sections/{{project_id}}&suite_id={{suite_id}}&limit={{limit}}&offset={{offset}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_sections/{{project_id}}",
+									"value": null
+								},
+								{
+									"key": "suite_id",
+									"value": "{{suite_id}}"
+								},
+								{
+									"key": "limit",
+									"value": "{{limit}}"
+								},
+								{
+									"key": "offset",
+									"value": "{{offset}}"
+								}
+							]
+						},
+						"description": "Returns a list of sections for a project and test suite."
+					},
+					"response": []
+				},
+				{
+					"name": "add_section",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"suite_id\": {{suite_id}},\n\t\"name\": \"This is a new section\",\n\t\"parent_id\": 10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/add_section/{{project_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/add_section/{{project_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Returns a list of sections for a project and test suite."
+					},
+					"response": []
+				},
+				{
+					"name": "move_section",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"parent_id\": {{parent_id}},\n    \"after_id\": {{after_id}}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/move_section/{{section_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/move_section/{{section_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Returns a list of sections for a project and test suite."
+					},
+					"response": []
+				},
+				{
+					"name": "update_section",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"A better section name\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/update_section/{{section_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/update_section/{{section_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Returns a list of sections for a project and test suite."
+					},
+					"response": []
+				},
+				{
+					"name": "delete_section",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/delete_section/{{section_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/delete_section/{{section_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Deletes an existing section."
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Shared Steps",
+			"item": [
+				{
+					"name": "get_shared_step",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/get_shared_step/{{shared_step_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_shared_step/{{shared_step_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Returns an existing set of shared steps."
+					},
+					"response": []
+				},
+				{
+					"name": "get_shared_steps",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/get_shared_steps/{{project_id}}&limit={{limit}}&offset={{offset}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_shared_steps/{{project_id}}",
+									"value": null
+								},
+								{
+									"key": "limit",
+									"value": "{{limit}}"
+								},
+								{
+									"key": "offset",
+									"value": "{{offset}}"
+								}
+							]
+						},
+						"description": "Returns a list of shared steps for a project."
+					},
+					"response": []
+				},
+				{
+					"name": "add_shared_step",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"First Step\",\n    \"custom_steps_separated\": [\n        {\n            \"content\": \"Open home page\",\n            \"additional_info\": \"Must be a new browser session\",\n            \"expected\": \"Login page loads\",\n            \"refs\": \"RF-1\"\n},\n    {\n        \"content\": \"Log In\"\n}\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/add_shared_step/{{project_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/add_shared_step/{{project_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Returns a list of shared steps for a project."
+					},
+					"response": []
+				},
+				{
+					"name": "update_shared_step",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Second Step\",\n    \"custom_steps_separated\": [\n        {\n            \"content\": \"Open home page\",\n            \"additional_info\": \"Must be a new browser session\",\n            \"expected\": \"Login page loads\",\n            \"refs\": \"RF-1\"\n},\n    {\n        \"content\": \"Log In\"\n}\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/update_shared_step/{{shared_step_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/update_shared_step/{{shared_step_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Returns a list of shared steps for a project."
+					},
+					"response": []
+				},
+				{
+					"name": "delete_shared_step",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"keep_in_cases\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/delete_shared_step/{{shared_step_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/delete_shared_step/{{shared_step_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Deletes an existing shared step entity. Requires permission to delete test cases within the project."
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Statuses",
+			"item": [
+				{
+					"name": "get_statuses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/get_statuses",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_statuses",
+									"value": null
+								}
+							]
+						},
+						"description": "Returns a list of available test statuses."
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Suites",
+			"item": [
+				{
+					"name": "get_suite",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/get_suite/{{suite_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_suite/{{suite_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Returns an existing test suite."
+					},
+					"response": []
+				},
+				{
+					"name": "get_suites",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/get_suites/{{project_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_suites/{{project_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Returns a list of test suites for a project."
+					},
+					"response": []
+				},
+				{
+					"name": "add_suites",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"This is a new test suite\",\n\t\"description\": \"Use the description to add additional context details\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/add_suite/{{project_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/add_suite/{{project_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Creates a new test suite."
+					},
+					"response": []
+				},
+				{
+					"name": "update_suite",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"This is a new test suite\",\n\t\"description\": \"Use the description to add additional context details\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/update_suite/{{suite_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/update_suite/{{suite_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Returns an existing test suite."
+					},
+					"response": []
+				},
+				{
+					"name": "delete_suite",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"This is a new test suite\",\n\t\"description\": \"Use the description to add additional context details\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/delete_suite/{{suite_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/delete_suite/{{suite_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Deletes an existing test suite."
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Template",
+			"item": [
+				{
+					"name": "get_templates",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/get_templates/{{project_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_templates/{{project_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Returns a list of available templates."
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Tests",
+			"item": [
+				{
+					"name": "get_test",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/get_test/{{test_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_test/{{test_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Returns an existing test."
+					},
+					"response": []
+				},
+				{
+					"name": "get_tests",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/get_tests/{{run_id}}&limit={{limit}}&offset={{offset}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_tests/{{run_id}}",
+									"value": null
+								},
+								{
+									"key": "limit",
+									"value": "{{limit}}"
+								},
+								{
+									"key": "offset",
+									"value": "{{offset}}"
+								}
+							]
+						},
+						"description": "Returns a list of tests for a test run."
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "get_user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0e0b5101-5a99-42d7-97de-b7f1cd60526b",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/get_user/{{user_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_user/{{user_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Returns an existing user."
+					},
+					"response": []
+				},
+				{
+					"name": "get_current_user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/get_current_user/{{user_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_current_user/{{user_id}}",
+									"value": null
+								}
+							]
+						},
+						"description": "Returns user details for the TestRail user making the API request."
+					},
+					"response": []
+				},
+				{
+					"name": "get_user_by_email",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/get_user_by_email&email={{mail}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_user_by_email",
+									"value": null
+								},
+								{
+									"key": "email",
+									"value": "{{mail}}"
+								}
+							]
+						},
+						"description": "Returns an existing user by his/her email address."
+					},
+					"response": []
+				},
+				{
+					"name": "get_users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/get_users&project_id={{project_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_users",
+									"value": null
+								},
+								{
+									"key": "project_id",
+									"value": "{{project_id}}"
+								}
+							]
+						},
+						"description": "Returns a list of users."
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "{{password}}",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "{{username}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "a7fcc6cf-d32c-46dd-8fae-8415e77d0bff",
+				"type": "text/javascript",
+				"exec": [
+					"pm.request.headers.add(",
+					"    {",
+					"        key: \"Content-Type\",",
+					"        value: \"application/JSON\"",
+					"    }",
+					")"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "3572d8eb-e1a7-4896-8d80-061235dfa9e7",
+				"type": "text/javascript",
+				"exec": [
+					"pm.test(\"Status test\", function () {",
+					"    pm.response.to.have.status(200);",
+					"});"
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
